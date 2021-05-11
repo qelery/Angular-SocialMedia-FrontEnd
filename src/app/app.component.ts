@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UserService} from './services/user/user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-social-media-frontend';
+  title = 'Twotter';
+  currentUser: any;
+
+  constructor(private userService: UserService) {}
+
+  ngOnInit(): void {
+    this.userService.searchSubject.subscribe(currentUser => {
+      this.currentUser = currentUser;
+      console.log(currentUser);
+    });
+  }
 }

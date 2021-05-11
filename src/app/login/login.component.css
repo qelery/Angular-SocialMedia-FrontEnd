@@ -1,0 +1,13 @@
+form {
+  margin-top: 3rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #2CABE0;
+  border-color: #2CABE0;
+}

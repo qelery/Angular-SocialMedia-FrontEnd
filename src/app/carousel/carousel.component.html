@@ -1,0 +1,23 @@
+<div id="carouselExampleFade" class="carousel slide carousel-fade mt-0 mb-4" data-bs-ride="carousel" data-bs-pause="false" data-bs-interval="4500">
+  <div class="carousel-inner">
+    <!--loop through all slides image urls -->
+    <!--assign the class 'carousel-item' to each slide element -->
+    <!--assign the only the first slide the class 'active' (necessary for bootstrap carousel to work properly) -->
+    <!--pass in the slide's img source to the slide element -->
+    <app-carousel-slide
+      *ngFor="let imageUrl of slideImageUrls; index as ind"
+      class="carousel-item"
+      [ngClass]="ind ? '' : 'active'"
+      imgSrc="{{imageUrl}}"
+    ></app-carousel-slide>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+

@@ -9,6 +9,9 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SocialmediaComponent } from './socialmedia/socialmedia.component';
+import { LogoutComponent } from './logout/logout.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselSlideComponent } from './carousel-slide/carousel-slide.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { SocialmediaComponent } from './socialmedia/socialmedia.component';
     RegisterComponent,
     LoginComponent,
     HomeComponent,
-    SocialmediaComponent
+    SocialmediaComponent,
+    LogoutComponent,
+    CarouselComponent,
+    CarouselSlideComponent,
   ],
   imports: [
     BrowserModule,
