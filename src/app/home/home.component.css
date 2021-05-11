@@ -1,0 +1,45 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 0;
+}
+
+.login-container h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.login-container p {
+  margin-bottom: 0.5em;
+}
+
+.login-text {
+  margin-bottom: 2rem;
+}
+
+.button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button {
+  background-color: rgb(29, 161, 242);
+  border-radius: 9999px;
+  padding-left: 32px;
+  padding-right: 32px;
+  min-height: 48px;
+  min-width: calc(77.28px);
+  border-color: rgb(29, 161, 242);
+  outline-style: none;
+  color: #FFF;
+  width: 15rem;
+  margin-right: 4rem;
+}
+
+button.btn-left {
+  background-color: #FFF;
+  color: rgb(29, 161, 242);
+}

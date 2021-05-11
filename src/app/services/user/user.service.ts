@@ -27,6 +27,7 @@ export class UserService {
     this.http
       .post(`${herokuUrl}/auth/users/login`, user)
       .subscribe(response => {
+        this.searchSubject.next(user);
         const token = response['jwt'];
         localStorage.setItem('currentUser', `${user.email}`);
         localStorage.setItem('token', `${token}`);
