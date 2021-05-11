@@ -1,1 +1,17 @@
-<p>socialmedia works!</p>
+<section>
+  <!--  <h2>Get All Categories for {{this.emailAddress}}</h2>-->
+  <button (click)="getPosts()">Get All Posts</button>
+</section>
+<div *ngIf="posts">
+  <h4>Timeline Feed</h4>
+  <ul>
+    <li *ngFor="let post of posts">
+      {{post.username}} -- {{post.title}} -- {{post.content}} -- {{post.date}}
+      <button (click)="deletePost(post)">delete</button>
+      <form (submit)="createPost(post)">
+        <input [(ngModel)]="postName" name="postName" type="text" placeholder="new post" />
+        <input type="submit"/>
+      </form>
+    </li>
+  </ul>
+</div>
