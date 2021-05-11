@@ -1,0 +1,51 @@
+<!--<nav>-->
+<!--  <div class="nav-wrapper">-->
+<!--    <a class="brand-logo" routerLink="/login">Recipe App</a>-->
+<!--    <ul id="nav-mobile" class="right hide-on-med-and-down">-->
+<!--      <li><a routerLink="/categories">All Categories</a></li>-->
+
+<!--      <span *ngIf="">-->
+<!--        <li><a routerLink="/signup">Sign Up</a></li>-->
+<!--        <li><a routerLink="/login">Log In</a></li>-->
+<!--      </span>-->
+<!--      <span *ngIf="">-->
+<!--        <li><a routerLink="/logout">Log Out</a></li>-->
+<!--        <li>Hello,</li>-->
+<!--      </span>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--</nav>-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">
+    <img src="https://th.bing.com/th/id/Rf5d1c97d6d391c40bd3f5caae69bca3b?rik=MgSZ%2bIDQgVdyQw&riu=http%3a%2f%2fwww.wired.com%2fwp-content%2fuploads%2f2015%2f07%2fFEATURED-TWITTER_Loss-01-1200x630.jpg" height="50" class="d-inline-block align-top" alt="">
+    Twotter
+  </a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register">Register</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Logout</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Social Media</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
