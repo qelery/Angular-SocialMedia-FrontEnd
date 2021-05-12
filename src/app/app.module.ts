@@ -12,6 +12,8 @@ import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 import { LogoutComponent } from './logout/logout.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselSlideComponent } from './carousel-slide/carousel-slide.component';
+import { CommentsComponent } from './comments/comments.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { CarouselSlideComponent } from './carousel-slide/carousel-slide.componen
     LogoutComponent,
     CarouselComponent,
     CarouselSlideComponent,
+    CommentsComponent,
+    PostsComponent,
   ],
   imports: [
     BrowserModule,

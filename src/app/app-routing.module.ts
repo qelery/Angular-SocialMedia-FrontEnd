@@ -5,6 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 import {LogoutComponent} from './logout/logout.component';
 import {HomeComponent} from './home/home.component';
+import {CommentsComponent} from './comments/comments.component';
 
 const routes: Routes = [
   {

@@ -1,0 +1,14 @@
+<div *ngIf="post">
+  <h4>{{post.title}}</h4>
+  <p>{{post.description}}</p>
+  <form (submit)="createComment()">
+    <input [(ngModel)]="commentText" name="commentText" type="text" placeholder="new comment" />
+    <input type="submit"/>
+  </form>
+  <ul>
+    <li *ngFor="let comment of post.commentList">
+      {{comment.text}}
+      <button (click)="deleteComment(post)">delete</button>
+    </li>
+  </ul>
+</div>

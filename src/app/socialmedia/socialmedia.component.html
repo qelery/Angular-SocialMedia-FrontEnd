@@ -2,16 +2,26 @@
   <!--  <h2>Get All Categories for {{this.emailAddress}}</h2>-->
   <button (click)="getPosts()">Get All Posts</button>
 </section>
+<section>
+  <h4>Create New Post</h4>
+  <form (submit)="createPost()">
+    <input [(ngModel)]="postTitle" name="categoryName" type="text" placeholder="title" />
+    <input [(ngModel)]="postContent" name="categoryDescription" type="text" placeholder="content" />
+    <input type="submit"/>
+  </form>
+</section>
 <div *ngIf="posts">
   <h4>Timeline Feed</h4>
   <ul>
     <li *ngFor="let post of posts">
       {{post.username}} -- {{post.title}} -- {{post.content}} -- {{post.date}}
       <button (click)="deletePost(post)">delete</button>
-      <form (submit)="createPost(post)">
-        <input [(ngModel)]="postName" name="postName" type="text" placeholder="new post" />
-        <input type="submit"/>
-      </form>
+      <ul>
+        <li *ngFor="let comment of post.comments">
+          {{ comment.username }}
+          {{ comment.date }}
+          {{ comment.text }}
+      </ul>
     </li>
   </ul>
 </div>

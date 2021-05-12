@@ -8,11 +8,11 @@ declare const M;
   styleUrls: ['./socialmedia.component.css']
 })
 export class SocialmediaComponent implements OnInit {
-  public posts: [];
+  public posts: any[];
   public username: string;
-  public title: string;
-  public content: string;
-  public date: Date;
+  public postTitle: string;
+  public postContent: string;
+  public postDate: Date;
 
   constructor(private postService: PostService) { }
 
@@ -21,6 +21,17 @@ export class SocialmediaComponent implements OnInit {
       this.posts = response;
     }, err => console.log(err));
   }
+
+  createPost(): any {
+    const newPost = {
+      title: this.postTitle,
+      content: this.postContent,
+    };
+    this.postService.createPost(newPost).subscribe(response => {
+      this.posts = [...this.posts, response];
+    }, err => console.log(err));
+  }
+
 
   ngOnInit(): void {
     this.getPosts();
