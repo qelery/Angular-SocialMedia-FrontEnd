@@ -1,0 +1,12 @@
+<ul>
+  <li *ngFor="let comment of post.comments">
+    {{ comment.username }}
+    {{ comment.date }}
+    {{ comment.text }}
+    <button (click)="deleteComment(post, comment)">delete</button>
+  </li>
+</ul>
+<form (submit)="createComment(post)">
+  <input [(ngModel)]="commentText" name="commentText" type="text" placeholder="your comment" />
+  <input type="submit"/>
+</form>

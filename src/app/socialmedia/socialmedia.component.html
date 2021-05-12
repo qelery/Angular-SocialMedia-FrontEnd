@@ -3,7 +3,7 @@
   <button (click)="getPosts()">Get All Posts</button>
 </section>
 <section>
-  <h4>Create New Post</h4>
+  <h3>Create New Post</h3>
   <form (submit)="createPost()">
     <input [(ngModel)]="postTitle" name="categoryName" type="text" placeholder="title" />
     <input [(ngModel)]="postContent" name="categoryDescription" type="text" placeholder="content" />
@@ -11,17 +11,27 @@
   </form>
 </section>
 <div *ngIf="posts">
-  <h4>Timeline Feed</h4>
+  <h3>Timeline Feed</h3>
   <ul>
     <li *ngFor="let post of posts">
-      {{post.username}} -- {{post.title}} -- {{post.content}} -- {{post.date}}
+      <p>{{post.username}}</p>
+      <p>{{post.date}}</p>
+      <h4>{{post.title}}</h4>
+      <p>{{post.content}}</p>
       <button (click)="deletePost(post)">delete</button>
-      <ul>
-        <li *ngFor="let comment of post.comments">
-          {{ comment.username }}
-          {{ comment.date }}
-          {{ comment.text }}
-      </ul>
+      <app-comment (submittedComment)="fromChild()" [post]="post"></app-comment>
+<!--      <ul>-->
+<!--        <li *ngFor="let comment of post.comments">-->
+<!--          {{ comment.username }}-->
+<!--          {{ comment.date }}-->
+<!--          {{ comment.text }}-->
+<!--          <button (click)="deleteComment(post, comment)">delete</button>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--      <form (submit)="createComment(post)">-->
+<!--        <input [(ngModel)]="commentText" name="commentText" type="text" placeholder="your comment" />-->
+<!--        <input type="submit"/>-->
+<!--      </form>-->
     </li>
   </ul>
 </div>

@@ -14,6 +14,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselSlideComponent } from './carousel-slide/carousel-slide.component';
 import { CommentsComponent } from './comments/comments.component';
 import { PostsComponent } from './posts/posts.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { PostsComponent } from './posts/posts.component';
     CarouselSlideComponent,
     CommentsComponent,
     PostsComponent,
+    CommentComponent,
   ],
   imports: [
     BrowserModule,

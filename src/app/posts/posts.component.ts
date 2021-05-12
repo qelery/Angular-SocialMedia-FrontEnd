@@ -27,12 +27,6 @@ export class PostsComponent implements OnInit {
       });
   }
 
-  createComment(post): any {
-    console.log('component: ', post, this.commentText);
-    const newComment = {comment: this.commentText};
-    this.postService.createComment(post, newComment).subscribe(response => {
-      console.log(response);
-    });
-  }
+
 
 }
